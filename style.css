@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7f9;
+    color: #15232d;
+}
+
+
+/* MENU */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: #071b26;
+    padding: 18px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #59e1b6;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #59e1b6;
+}
+
+
+/* CAPA */
+
+.hero {
+    min-height: 85vh;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 70px 10%;
+
+    background:
+        linear-gradient(
+            120deg,
+            #071b26,
+            #0b3444
+        );
+
+    color: white;
+}
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+.destaque {
+    color: #59e1b6;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 75px;
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #59e1b6;
+}
+
+.hero-conteudo > p:not(.destaque) {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 580px;
+}
+
+.botao {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px 25px;
+
+    background: #59e1b6;
+    color: #071b26;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 7px;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+}
+
+.robo {
+    font-size: 180px;
+}
+
+
+/* TÍTULOS */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo > p {
+    color: #008c72;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.titulo h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* SOBRE */
+
+.sobre {
+    padding: 90px 10%;
+}
+
+.sobre-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 40px;
+}
+
+.sobre-texto,
+.desafio {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 8px 30px
+        rgba(0,0,0,0.07);
+}
+
+.sobre-texto h3,
+.desafio h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.sobre-texto p,
+.desafio p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.desafio {
+    background: #dffaf1;
+}
+
+.icone {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+/* PROJETOS */
+
+.projetos {
+    padding: 90px 8%;
+    background: #eaf0f2;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.foto {
+    position: relative;
+    height: 240px;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.numero {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: #59e1b6;
+
+    padding: 10px 14px;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.card-conteudo {
+    padding: 25px;
+}
+
+.categoria {
+    color: #008c72;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.card h3 {
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.equipe {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.card button {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #071b26;
+    color: white;
+
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #008c72;
+}
+
+
+/* DETALHES */
+
+.detalhes {
+    display: none;
+
+    margin-top: 25px;
+    padding-top: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+.detalhes h4 {
+    margin-bottom: 10px;
+}
+
+.detalhes video {
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+
+/* GALERIA */
+
+.galeria {
+    padding: 90px 8%;
+}
+
+.galeria-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.galeria-grid img:hover {
+    transform: scale(1.03);
+}
+
+
+/* APRENDIZAGEM */
+
+.aprendizagem {
+    padding: 90px 10%;
+
+    background: #071b26;
+    color: white;
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.mini {
+    color: #59e1b6;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.aprendizagem h2 {
+    font-size: 45px;
+    margin: 15px 0 25px;
+}
+
+.aprendizagem p {
+    line-height: 1.7;
+}
+
+.competencias {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 20px;
+}
+
+.competencias div {
+    background: #0e3343;
+
+    padding: 30px 15px;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.competencias span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 45px 20px;
+
+    background: #04131b;
+    color: white;
+}
+
+footer h3 {
+    color: #59e1b6;
+    margin-bottom: 15px;
+}
+
+footer p {
+    margin: 7px;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 850px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .robo {
+        font-size: 100px;
+        margin-top: 50px;
+    }
+
+    .sobre-grid,
+    .cards,
+    .aprendizagem {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+}
